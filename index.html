@@ -10,49 +10,32 @@
 
     <title>Crystal Collector</title>
 </head>
-<body background ="assets/images/nice_snow.png">
+<body background ="assets/images/background.jpg">
     <nav>
-        <h2>Crystals Collector </h2>
+        <h2>Star Wars RPG! </h2>
     </nav>
-    <div class="row">
-        <div class="col-sm-12">
-            <div id="instructions">
-                <p>You will be given a random number at the start of the game.</p>
-                <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
-                <p>You win the game by matching your total score to random number, you lose the game if your total score goes above the random number.</p>
-                <p>The values of each crystal is hidden from you until you click on it.</p>
-                <p>Each time when the game starts, the game will change the value of the crystals.</p>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-6">   
-            <div class = "numberBox">
-                <div id ="randomNumber">
-                    00
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6"> 
-            <div id ="runningScore">
-                <p id="wins"> Wins: 0</p>
-                <p id="losses">Losses: 0</p>
-            </div>
-        </div>
-    </div>
+
 
     <div class ="row">
-        <div class="col-sm-3 jewel-1 jewels">
-            <img src="assets/images/jewel1.png" alt="jewel1" />
+        <div class="col-sm-3 player-1 card text-center" style="width: 14rem;">
+            <div class="card-header">Obi-Wan Kenobi</div>
+            <img src="assets/images/obi-wan.jpg" alt="player1" />
+            <p class ="firstScore card-text">0</p>
         </div>
-        <div class="col-sm-3 jewel-2 jewels">
-            <img src="assets/images/jewel2.png" alt="jewel2" />
+        <div class="col-sm-3 player-2 card text-center" style="width: 18rem;">
+            <div class="card-header">Luke Skywalker</div>
+            <img src="assets/images/luke-skywalker.jpg" alt="player2" />
+            <p class ="secondScore card-text">0</p>
         </div>
-        <div class="col-sm-3 jewel-3 jewels">
-            <img src="assets/images/jewel3.png" alt="jewel3" />
+        <div class="col-sm-3 player-3 card text-center" style="width: 18rem;">
+            <div class="card-header">Darth Sidious</div>
+            <img src="assets/images/darth-sidious.jpg" alt="player3" />
+            <p class ="thirdScore card-text">0</p>
         </div>       
-        <div class="col-sm-3 jewel-4 jewels">
-            <img src="assets/images/jewel4.png" alt="jewel4"/>
+        <div class="col-sm-3 player-4 card text-center" style="width: 18rem;">
+            <div class="card-header">Darth Maul</div>
+            <img src="assets/images/darth-maul.jpg" alt="player4"/>
+            <p class ="fourthScore card-text">0</p>
         </div>
     </div>
 
@@ -60,14 +43,14 @@
         <div class="col-md-6">   
             <div class = "numberBox">
                 <div id ="totalScore">
-                    <h6>You total score is : </h6>
+
                 </div>
             </div>
         </div>
         <div class="col-md-6"> 
             <div class = "numberBox">  
                 <div id ="currentTotal">
-                    <h6>0 </h6>
+
                 </div>
             </div>
         </div>
