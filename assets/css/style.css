@@ -1,0 +1,43 @@
+h2{
+    color: white;
+    background-color: darkmagenta;
+    display: inline-block;
+    text-align: center;
+
+}
+#instructions{
+    background-color: ivory;
+    color:darkmagenta;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+    margin: 0px 20px;
+    
+    
+}
+.numberBox,#runningScore{
+
+    background-color: ivory;
+    color: darkmagenta;
+    text-align: center;
+    font-size: 18px;
+    padding: 20px;
+    margin: 0px 20px;
+
+}
+#runningScore{
+    float: left;
+}
+body{
+    text-align: center;
+    position: absolute;
+
+}
+.jewels,img{
+    margin:5px 0;
+    width: 200px;
+    height: 200px;
+}
+#currentTotal{
+    margin: auto 20px;
+}
+
