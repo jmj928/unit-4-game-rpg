@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
-    <title>Crystal Collector</title>
+    <title>Star Wars RPG</title>
 </head>
 <body background ="assets/images/background.jpg">
     <nav>
@@ -16,45 +16,45 @@
     </nav>
 
 
-    <div class ="row">
-        <div class="col-sm-3 player-1 card text-center" style="width: 14rem;">
-            <div class="card-header">Obi-Wan Kenobi</div>
-            <img src="assets/images/obi-wan.jpg" alt="player1" />
-            <p class ="firstScore card-text">0</p>
+    <!-- <div class ="row">
+        <div class="col-sm-3  card text-center" style="width: 14rem;">
+            <div class="card-header header-1">Obi-Wan Kenobi</div>
+            <img src="assets/images/obi-wan.jpg" alt="player1" class="players" id="player-1" />
+            <div class="card-footer text-muted firstScore">
+                    120
+            </div>
         </div>
         <div class="col-sm-3 player-2 card text-center" style="width: 18rem;">
-            <div class="card-header">Luke Skywalker</div>
-            <img src="assets/images/luke-skywalker.jpg" alt="player2" />
-            <p class ="secondScore card-text">0</p>
+            <div class="card-header header-2">Luke Skywalker</div>
+            <img src="assets/images/luke-skywalker.jpg" alt="player2" class="players" id="player-2" />
+            <div class="card-footer text-muted secondScore">
+                    100
+            </div>
         </div>
         <div class="col-sm-3 player-3 card text-center" style="width: 18rem;">
-            <div class="card-header">Darth Sidious</div>
-            <img src="assets/images/darth-sidious.jpg" alt="player3" />
-            <p class ="thirdScore card-text">0</p>
+            <div class="card-header header-3">Darth Sidious</div>
+            <img src="assets/images/darth-sidious.jpg" alt="player3" class="players" id="player-3" />
+            <div class="card-footer text-muted thirdScore">
+                   150
+            </div>
         </div>       
         <div class="col-sm-3 player-4 card text-center" style="width: 18rem;">
-            <div class="card-header">Darth Maul</div>
-            <img src="assets/images/darth-maul.jpg" alt="player4"/>
-            <p class ="fourthScore card-text">0</p>
+            <div class="card-header header-4">Darth Maul</div>
+            <img src="assets/images/darth-maul.jpg" alt="player4" class="players" id="player-4"/>
+            <div class="card-footer text-muted fourthScore">
+                    180
+            </div>
+        </div>
+    </div> -->
+    <div id="listOfCharacters">
+    </div>
+    <div class="col-lg-6 pull-left">
+        <h2>Your Character</h2>
+        <div id="character">
+                    
         </div>
     </div>
 
-    <div class="row">
-        <div class="col-md-6">   
-            <div class = "numberBox">
-                <div id ="totalScore">
-
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6"> 
-            <div class = "numberBox">  
-                <div id ="currentTotal">
-
-                </div>
-            </div>
-        </div>
-    </div>
         
         
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

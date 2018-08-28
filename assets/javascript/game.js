@@ -1,90 +1,79 @@
 $(document).ready(function () {
 
+	var obiWan;
+	var lukeSkywalker;
+	var darthSidious;
+	var darthMaul;
 
-var randomNumber = "";
-//console.log(randomNumber);
-
-var firstJewelValue = "";
-var secondJewelValue = "";
-var thirdJewelValue = "";
-var fourthJewelValue = "";
-var finalResult=0;
-var wins =0;
-var losses = 0;
-
-generateNewValues();
-
-
-
-$(".jewel-1").on("click", function(){
+	var allCharacters = [];
+	var yourCharacter = null;
+	var allDefenders = [];
+    var currentDefender = null;
     
-    console.log("Clicked box 1 " + firstJewelValue);
-    updateResult(firstJewelValue);
 
-});
+    resetToBeginning();
 
-$(".jewel-2").on("click", function(){
-    
-    console.log("Clicked box 2 " + secondJewelValue );
-    updateResult(secondJewelValue);
+function resetToBeginning() {
 
-});
+    //make each character an object
 
-$(".jewel-3").on("click", function(){
-    
-    console.log("Clicked box 3 " + thirdJewelValue);
-    updateResult(thirdJewelValue);
-
-});
-
-$(".jewel-4").on("click", function(){
-    
-    console.log("Clicked box 4 " + fourthJewelValue);
-    updateResult(fourthJewelValue);
-
-});
-
-
-
-function updateResult(result) {
-    finalResult = result + finalResult;
-
-    $("#currentTotal").html("<p>" + finalResult + "</p>");
-
-    if(finalResult === randomNumber){
-        wins++;
-        $("#wins").html("<p>Wins : " + wins + "</p>");
-        alert("You won!!");
-        generateNewValues();
-    }
-    else if(finalResult > randomNumber){
-        losses++;
-        $("#losses").html("<p>Losses : " + losses + "</p>");
-        alert("Sorry, you went over. You lose");
-        generateNewValues();
+    obiWan = {
+        id: 0,
+        name: "Obi-Wan Kenobi",
+        healthPoints: 120,
+        baseAttack:10,
+        attackPower: 10,
+        counterAttackPower: 8,
+        img:"assets/images/obi-wan.jpg"
     }
 
+    lukeSkywalker = {
+        id: 1,
+        name: "Luke Skywalker",
+        healthPoints: 100,
+        baseAttack:8,
+        attackPower: 8,
+        counterAttackPower: 5,
+        img:"assets/images/luke-skywalker.jpg"
+    }
+
+    darthSidious = {
+        id: 2,
+        name: "Darth Sidious",
+        healthPoints: 150,
+        baseAttack:9,
+        attackPower: 9,
+        counterAttackPower: 10,
+        img:"assets/images/darth-sidious.jpg"
+    }
+
+    darthMaul = {
+        id: 3,
+        name: "Darth Maul",
+        healthPoints: 180,
+        baseAttack:12,
+        attackPower: 12,
+        counterAttackPower: 12,
+        img:"assets/images/darth-maul.jpg"
+    }
+
+
+
+    //set characters
+    allCharacters = [obiWan, lukeSkywalker, darthSidious, darthMaul ];
+
+
+    for(var i = 0; i < allCharacters.length; i++)
+    {
+        //console(allCharacters.length);
+        var newCharacterDiv = $("<div>").addClass("col-sm-3 card text-center").attr("id",allCharacters[i].id);
+        $("<div>").addClass("card-header").html(allCharacters[i].name).appendTo(newCharacterDiv);
+        $("<div>").addClass("card-body players").append("<img src='" + allCharacters[i].img + "'>").appendTo(newCharacterDiv);
+        $("<div>").addClass("card-footer").append("<span class='hp'>" + allCharacters[i].healthPoints + "</span>").appendTo(newCharacterDiv);
+
+        $("#listOfCharacters").append(newCharacterDiv);
+    }
 }
-
-function generateNewValues(){
-finalResult = 0;
-randomNumber = Math.floor(Math.random() * (102)+ 19);
-console.log(randomNumber);
-
-firstJewelValue = Math.floor(Math.random() * (12)+ 1);
-secondJewelValue = Math.floor(Math.random() * (12)+ 1);
-thirdJewelValue = Math.floor(Math.random() * (12)+ 1);
-fourthJewelValue = Math.floor(Math.random() * (12)+ 1);
-
-$("#randomNumber").html("<p>" + randomNumber + "</p>");
-$("#currentTotal").html("<p>" + finalResult + "</p>");
-
-
-}
-
-
-
-
 
 
 });
