@@ -4,10 +4,10 @@ body{
     z-index:-1;
 
 }
-h2{
+h1,h2{
     color: white;
     /* text-align: right; */
-    margin: 20px;
+    /* margin: 20px; */
 }
 h6{
     font-size: 12px;
@@ -24,11 +24,10 @@ p{
 img{
     width: 150px;
     height: 150px;
-}
-.players{
-    cursor: pointer;
+
 }
 .card{
     float: left;
-    
+    cursor: pointer;
+    z-index:2;
 }

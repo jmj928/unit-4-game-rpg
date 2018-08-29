@@ -66,14 +66,38 @@ function resetToBeginning() {
     for(var i = 0; i < allCharacters.length; i++)
     {
         //console(allCharacters.length);
-        var newCharacterDiv = $("<div>").addClass("col-sm-3 card text-center").attr("id",allCharacters[i].id);
-        $("<div>").addClass("card-header").html(allCharacters[i].name).appendTo(newCharacterDiv);
-        $("<div>").addClass("card-body players").append("<img src='" + allCharacters[i].img + "'>").appendTo(newCharacterDiv);
-        $("<div>").addClass("card-footer").append("<span class='hp'>" + allCharacters[i].healthPoints + "</span>").appendTo(newCharacterDiv);
+        var newCharacter = $("<div>").addClass("col-sm-3 card players text-center").attr("id",allCharacters[i].id);
+        $("<div>").addClass("card-header").html(allCharacters[i].name).appendTo(newCharacter);
+        $("<div>").addClass("card-body").append("<img src='" + allCharacters[i].img + "'>").appendTo(newCharacter);
+        $("<div>").addClass("card-footer").append("<span>" + allCharacters[i].healthPoints + "</span>").appendTo(newCharacter);
 
-        $("#listOfCharacters").append(newCharacterDiv);
+        $("#listOfCharacters").append(newCharacter);
     }
-}
+    }
+
+    $(".players").on("click", function(){
+        //get ID of what charaacter you clicked on
+        var getId = parseInt($(this).attr("id"));
+        yourCharacter = allCharacters[getId].id;
+
+        //create loop to add selected and remaining characters to correct location
+        for(var i =0; i < allCharacters.length;i++)
+
+        if(allCharacters[i].id === yourCharacter){
+
+        $("#"+ yourCharacter).appendTo("#character");
+
+        }
+        else{
+            //add enemies to array
+            allDefenders.push(allCharacters[i].id);
+            $("#"+ allCharacters[i].id).appendTo("#defenderArea");
+
+        }
+
+
+
+    });
 
 
 });
